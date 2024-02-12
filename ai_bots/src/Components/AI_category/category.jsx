@@ -3,32 +3,31 @@ import { Container, Form, Button, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function CategoryForm() {
-    const [categoryName, setCategoryName] = useState('');
-    const [categoryInfo, setCategoryInfo] = useState('');
+    const [AssistantName, setAssistantName] = useState('');
+    const [AssistantInfo, setAssistantInfo] = useState('');
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log({ categoryName, categoryInfo });
+        console.log({ AssistantName, AssistantInfo });
     };
 
     return (
         <Container>
-            <h1>Create a new category</h1>
-            <Form onSubmit={handleSubmit}>
-                <Form.Group as={Row} className="mb-3" controlId="formCategoryName">
-                    <Form.Label column sm={2}>
-                        Enter category Name
+            <div className='title'>Create a new Assistant</div>
+            <Form onSubmit={handleSubmit} className='w-75'>
+                <Form.Group className="mb-3 col" controlId="formCategoryName">
+                    <Form.Label>
+                        Enter Assistant Name
                     </Form.Label>
-                    <Col sm={10}>
-                        <Form.Control
-                            type="text"
-                            placeholder="Enter category name"
-                            value={categoryName}
-                            onChange={(e) => setCategoryName(e.target.value)}
-                        />
-                    </Col>
+                    <Form.Control
+                        type="text"
+                        placeholder="Enter Assistant name"
+                        value={AssistantName}
+                        onChange={(e) => setAssistantName(e.target.value)}
+                    />
                 </Form.Group>
-                <Form.Group as={Row} className="mb-3" controlId="formCategoryInfo">
+
+                <Form.Group className="mb-3" controlId="formCategoryInfo">
                     <Form.Label column sm={2}>
                         Category information
                     </Form.Label>
@@ -37,8 +36,8 @@ function CategoryForm() {
                             as="textarea"
                             rows={3}
                             placeholder="Enter info"
-                            value={categoryInfo}
-                            onChange={(e) => setCategoryInfo(e.target.value)}
+                            value={AssistantInfo}
+                            onChange={(e) => setAssistantInfo(e.target.value)}
                         />
                     </Col>
                 </Form.Group>
