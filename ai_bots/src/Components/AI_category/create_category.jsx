@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Form, Button, Row, Col } from 'react-bootstrap';
+import { Container, Form, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from '../Header/header';
 function CategoryForm() {
@@ -10,26 +10,6 @@ function CategoryForm() {
         event.preventDefault();
         console.log("AssistantName " + AssistantName)
         console.log("AssistantInfo " + AssistantInfo)
-
-        // fetch("https://dashboard-dmitrykarpov.pythonanywhere.com/create_category/", {
-        //     method: "POST",
-        //     mode: "cors",
-        //     cache: "no-cache",
-        //     headers: {
-        //         "Content-Type": "application/json"
-        //     },
-        //     body: ({
-        //         name: AssistantName,
-        //         description: AssistantInfo,
-
-        //     })
-        // })
-        //     .then(response => response.json())
-        //     .then(data => {
-
-        //     })
-        //     .catch(error => { console.error("Error fetching data:", error); })
-
 
     };
 
