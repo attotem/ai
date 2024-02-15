@@ -1,7 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const CustomerRow = ({ name, instructions, id, user_id }) => {
+const CustomerRow = ({ name, description, id, user_id }) => {
 
     // const handleSubmit = (event) => {
     //     event.preventDefault();
@@ -24,13 +24,10 @@ const CustomerRow = ({ name, instructions, id, user_id }) => {
 
     return (
         <tr className='TableRow' >
-            <td class="py-3 table_text align-middle">{id}</td>
-            <td class="py-3 table_text align-middle">{name}</td>
-            <td class="py-3 table_text align-middle">{instructions}</td>
-            {/* <td class="py-3 table_text align-middle">{phone}</td>
-            <td class="py-3 table_text align-middle">{email}</td>
-            <td class="py-3 table_text align-middle">**********</td> */}
-            {/* <td class="py-3 table_text align-middle"><div className='status_active' onClick={handleSubmit}>Edit</div></td> */}
+            <td className="py-3 table_text align-middle">{id}</td>
+            <td className="py-3 table_text align-middle">{name}</td>
+            <td className="py-3 table_text align-middle">{description}</td>
+            <td className="py-3 table_text align-middle"><div className='status_active'>Edit</div></td>
         </tr>
     );
 };

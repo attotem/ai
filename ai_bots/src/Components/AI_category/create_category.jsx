@@ -8,7 +8,29 @@ function CategoryForm() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log({ AssistantName, AssistantInfo });
+        console.log("AssistantName " + AssistantName)
+        console.log("AssistantInfo " + AssistantInfo)
+
+        // fetch("https://dashboard-dmitrykarpov.pythonanywhere.com/create_category/", {
+        //     method: "POST",
+        //     mode: "cors",
+        //     cache: "no-cache",
+        //     headers: {
+        //         "Content-Type": "application/json"
+        //     },
+        //     body: ({
+        //         name: AssistantName,
+        //         description: AssistantInfo,
+
+        //     })
+        // })
+        //     .then(response => response.json())
+        //     .then(data => {
+
+        //     })
+        //     .catch(error => { console.error("Error fetching data:", error); })
+
+
     };
 
     return (
